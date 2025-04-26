@@ -59,7 +59,8 @@ html, body {
 			 hours = (date.getHours() < 10) ? '0' + date.getHours() : date.getHours(),
 			 minutes = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes(),
 			 seconds = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds();
-	  document.getElementById('clock').innerHTML = hours + '<span class="blink">:</span>' + minutes;
+	  document.getElementById('clockH').innerHTML = hours;
+	  document.getElementById('clockM').innerHTML =  minutes;
 	}
 	setInterval(clock, 1000);
 	clock();
@@ -69,7 +70,7 @@ html, body {
 <div class="outer">
   <div class="inner">
   <span id="text1">Сейчас</span><br />
-  <span id="clock"></span><br />
+  <span id="clockH"></span><span class="blink">:</span><span id="clockM"></span><br />
    <span id="text2">Самое время сделать<br />запасной ключ!</span>
   </div>
 </div>
