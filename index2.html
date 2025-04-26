@@ -24,6 +24,7 @@ html, body {
 }
 
 .outer {
+	 z-index: 1;
   text-align: center;
 }
 
@@ -115,15 +116,20 @@ html, body {
   </script>
  </head>
  <body>
-
+<div class="stars"></div>
+<div class="twinkling"></div>
 <div class="outer">
   <div class="inner">
-  <span id="text1">Сейчас</span><br />
-  <div class="clock"><span id="clockH"></span><span class="blink">:</span><span id="clockM"></span></div><br />
+  	<span id="text1">Сейчас</span><br />
+ 	 <div class="clock">
+		 <span id="clockH"></span>
+		 <span class="blink">:</span>
+		 <span id="clockM"></span>
+	 </div>
+	  <br />
    <span id="text2">Самое время сделать<br />запасной ключ!</span>
   </div>
 </div>
-<div class="stars"></div>
-<div class="twinkling"></div>	 
+	 
  </body>
 </html>
