@@ -43,6 +43,14 @@ html, body {
 	line-height: 1;
 }
 
+.blink {
+    animation: blink 2s infinite; /* Параметры анимации */
+   }
+   @keyframes blink {
+    from { opacity: 1; /* Непрозрачный текст */ }
+    to { opacity: 0; /* Прозрачный текст */ }
+   }
+
 </style>
   
   <script type="text/javascript">
@@ -51,7 +59,7 @@ html, body {
 			 hours = (date.getHours() < 10) ? '0' + date.getHours() : date.getHours(),
 			 minutes = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes(),
 			 seconds = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds();
-	  document.getElementById('clock').innerHTML = hours + ':' + minutes;
+	  document.getElementById('clock').innerHTML = hours + '<span class="blink">:</span>' + minutes;
 	}
 	setInterval(clock, 1000);
 	clock();
