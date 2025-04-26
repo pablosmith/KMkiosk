@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+ <head>
+  <meta charset="utf-8">
+  <title>.</title>
+<style>
+
+html, body {
+	padding: 0;
+	margin: 0;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+.outer:before {
+  content: '';
+  display: inline-block;
+  height: 100vh;
+  vertical-align: middle;
+}
+
+.inner {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.outer {
+  text-align: center;
+}
+
+#clock {
+	font-size: 50vh;
+	font-weight: bold;
+	line-height: 1;
+}
+
+#text1 {
+	font-size: 20vh;
+	line-height: 1;
+}
+
+#text2 {
+	font-size: 12vh;
+	line-height: 1;
+}
+
+.blink {
+    animation: blink 1s infinite; /* Параметры анимации */
+   }
+   @keyframes blink {
+    from { opacity: 0; /* Непрозрачный текст */ }
+    to { opacity: 1; /* Прозрачный текст */ }
+   }
+
+</style>
+  
+  <script type="text/javascript">
+	function clock(){
+	  var date = new Date(),
+			 hours = (date.getHours() < 10) ? '0' + date.getHours() : date.getHours(),
+			 minutes = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes(),
+			 seconds = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds();
+	  document.getElementById('clock').innerHTML = hours + '<span class="blink">:</span>' + minutes;
+	}
+	setInterval(clock, 1000);
+	clock();
+  </script>
+ </head>
+ <body>
+<div class="outer">
+  <div class="inner">
+  <span id="text1">Сейчас</span><br />
+  <span id="clock"></span><br />
+   <span id="text2">Самое время сделать<br />запасной ключ!</span>
+  </div>
+</div>
+ </body>
+</html>
