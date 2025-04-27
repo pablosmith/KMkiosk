@@ -55,13 +55,22 @@ html, body {
 </style>
   
   <script type="text/javascript">
-
+	let year = 1;
 	function clock(){
 	  var date = new Date(),
 			 hours = (date.getHours() < 10) ? '0' + date.getHours() : date.getHours(),
 			 minutes = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes(),
 			 seconds = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds();
-	document.getElementById('clock').innerHTML = hours + '<span class="blink">:</span>' + minutes;
+	if (year == 1) {
+		document.getElementById('clock').innerHTML = hours + ' ' + minutes;
+		let year = 0;
+	}
+
+	if (year == 0) {
+		document.getElementById('clock').innerHTML = hours + ':' + minutes;
+		let year = 1;
+	}
+		
 	}
 	setInterval(clock, 10000);
 	clock();
