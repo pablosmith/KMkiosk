@@ -46,10 +46,11 @@ html, body {
 .blink {
     animation: blink 1s infinite; 
 }
-  @keyframes blink {
-    from { opacity: 0;}
-    to { opacity: 1;} 
-    } 
+	
+@keyframes blink {
+     from { opacity: 0;}
+     to { opacity: 1; } 
+} 
 
 </style>
   
@@ -62,7 +63,7 @@ html, body {
 			 seconds = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds();
 	document.getElementById('clock').innerHTML = hours + '<span class="blink">:</span>' + minutes;
 	}
-	setInterval(clock, 1500);
+	setInterval(clock, 10000);
 	clock();
   </script>
  </head>
