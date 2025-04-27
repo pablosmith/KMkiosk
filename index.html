@@ -54,14 +54,15 @@ html, body {
 </style>
   
   <script type="text/javascript">
+
 	function clock(){
 	  var date = new Date(),
 			 hours = (date.getHours() < 10) ? '0' + date.getHours() : date.getHours(),
 			 minutes = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes(),
 			 seconds = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds();
-	  document.getElementById('clock').innerHTML = hours + '<span class="blink">:</span>' + minutes;
+	document.getElementById('clock').innerHTML = hours + '<span class="blink">:</span>' + minutes;
 	}
-	setInterval(clock, 1000);
+	setInterval(clock, 1500);
 	clock();
   </script>
  </head>
