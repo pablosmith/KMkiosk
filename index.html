@@ -63,19 +63,19 @@ html, body {
 			 minutes = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes(),
 			 seconds = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds();
 	
-	let line = "";
+	//let line = "";
 		
-	if (year == 1) {
-		line = hours + ' ' + minutes;
-		year = 0;
-	}
+	//if (year == 1) {
+	//	line = hours + ' ' + minutes;
+	//	year = 0;
+	//}
 
-	if (year == 0) {
-		line = hours + ':' + minutes;
-		year = 1;
-	}
-	console.log(year);
-	document.getElementById('clock').innerHTML = line;
+	//if (year == 0) {
+	//	line = ;
+	//	year = 1;
+	//}
+	//console.log(year);
+	document.getElementById('clock').innerHTML = hours + ':' + minutes;
 		
 	}
 	setInterval(clock, 1000);
